@@ -73,7 +73,7 @@ export default async function Home({
     <>
       <div className="max-md:pt-18">
         <Image
-          src="/images/content/living-room.png"
+          src="/images/content/hero.jpg"
           width={2880}
           height={1500}
           alt="Living room"
@@ -84,15 +84,16 @@ export default async function Home({
         <Layout className="mb-26 md:mb-34">
           <LayoutColumn start={1} end={{ base: 13, md: 8 }}>
             <h3 className="text-2xl">
-              Elevate Your Living Space with Unmatched Comfort & Style
+            Líderes mundiales
+            en aire acondicionado
             </h3>
           </LayoutColumn>
           <LayoutColumn start={{ base: 1, md: 9 }} end={13}>
             <div className="flex items-center h-full">
               <div className="text-md">
-                <p>Discover Your Perfect Sofa Today</p>
+                <p>CONOCE LOS PRODUCTOS QUE DAIKIN TE OFRECE</p>
                 <LocalizedLink href="/store" variant="underline">
-                  Explore Now
+                  Explorar Ahora
                 </LocalizedLink>
               </div>
             </div>
