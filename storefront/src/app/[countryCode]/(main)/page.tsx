@@ -28,7 +28,7 @@ const ProductTypesSection: React.FC = async () => {
   return (
     <Layout className="mb-26 md:mb-36 max-md:gap-x-2">
       <LayoutColumn>
-        <h3 className="text-lg md:text-2xl mb-8 md:mb-15">Our products</h3>
+        <h3 className="text-lg md:text-2xl mb-8 md:mb-15">Más vendidos.</h3>
       </LayoutColumn>
       {productTypes.productTypes.map((productType, index) => (
         <LayoutColumn
@@ -73,7 +73,7 @@ export default async function Home({
     <>
       <div className="max-md:pt-18">
         <Image
-          src="/images/content/living-room.png"
+          src="/images/content/hero.png"
           width={2880}
           height={1500}
           alt="Living room"
