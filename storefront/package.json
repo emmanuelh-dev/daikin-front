@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "@medusajs/icons": "^2.5.0",
     "@medusajs/js-sdk": "2.2.0",
     "@medusajs/types": "2.2.0",
     "@medusajs/ui": "4.0.0",
