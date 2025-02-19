@@ -37,8 +37,8 @@ export const Header: React.FC = async () => {
               </h1>
               <div className="flex items-center gap-8 max-md:hidden">
                 <LocalizedLink href="/about">About</LocalizedLink>
-                <LocalizedLink href="/inspiration">Inspiration</LocalizedLink>
-                <LocalizedLink href="/store">Shop</LocalizedLink>
+                <LocalizedLink href="/all">Empleados</LocalizedLink>
+                <LocalizedLink href="/store">Tienda</LocalizedLink>
               </div>
               <div className="flex items-center gap-3 lg:gap-6 max-md:hidden">
                 <RegionSwitcher
