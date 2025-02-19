@@ -46,7 +46,7 @@ export default async function PaginatedProducts({
   } = await getProductsListWithSort({ page, queryParams, sortBy, countryCode });
 
   const totalPages = Math.ceil(count / PRODUCT_LIMIT);
-  console.log(products)
+
   return (
     <>
       {!table ? (
