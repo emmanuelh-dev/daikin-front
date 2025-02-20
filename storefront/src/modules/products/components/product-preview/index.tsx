@@ -66,6 +66,9 @@ export default async function ProductPreview({
             </div>
           )
         ) : null}
+        <LocalizedLink href="/cart" variant="underline">
+          Read more about Sofa Society
+        </LocalizedLink>
       </div>
     </LocalizedLink>
   )
