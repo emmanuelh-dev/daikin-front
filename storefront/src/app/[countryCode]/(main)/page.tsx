@@ -84,8 +84,8 @@ export default async function Home({
         <Layout className="mb-26 md:mb-34">
           <LayoutColumn start={1} end={{ base: 13, md: 8 }}>
             <h3 className="text-2xl">
-            Líderes mundiales
-            en aire acondicionado
+              Líderes mundiales
+              en aire acondicionado
             </h3>
           </LayoutColumn>
           <LayoutColumn start={{ base: 1, md: 9 }} end={13}>
@@ -104,7 +104,7 @@ export default async function Home({
         <Layout>
           <LayoutColumn className="col-span-full">
             <h3 className="text-lg md:text-2xl mb-8 md:mb-15">
-              About Sofa Society
+              Más sobre
             </h3>
             <Image
               src="/images/content/sofa2.png"
@@ -116,8 +116,7 @@ export default async function Home({
           </LayoutColumn>
           <LayoutColumn start={1} end={{ base: 13, md: 7 }}>
             <h2 className="text-lg md:text-2xl">
-              At Sofa Society, we believe that a sofa is the heart of every
-              home.
+              Daikin México | Líder en Aire Acondicionado
             </h2>
           </LayoutColumn>
           <LayoutColumn
@@ -127,15 +126,14 @@ export default async function Home({
           >
             <div className="md:text-md">
               <p className="mb-5 md:mb-9">
-                We are dedicated to delivering high-quality, thoughtfully
-                designed sofas that merge comfort and style effortlessly.
+                Daikin es el principal innovador y proveedor mundial de soluciones avanzadas de aire acondicionado y calefacción de alta calidad para aplicaciones residenciales, comerciales e industriales.
+
               </p>
               <p className="mb-5 md:mb-3">
-                Our mission is to transform your living space into a sanctuary
-                of relaxation and beauty, with products built to last.
+                En Daikin ofrecemos un servicio de excelencia que garantiza a nuestros clientes la seguridad y confianza de haber adquirido la mejor solución HVAC del mercado
               </p>
               <LocalizedLink href="/about" variant="underline">
-                Read more about Sofa Society
+                Lee más sobre DAIKIN.
               </LocalizedLink>
             </div>
           </LayoutColumn>
