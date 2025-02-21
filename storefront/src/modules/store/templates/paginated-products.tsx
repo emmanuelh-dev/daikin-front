@@ -6,6 +6,7 @@ import { Pagination } from "@modules/store/components/pagination";
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products";
 import { Layout, LayoutColumn } from "@/components/Layout";
 import { Button, Table } from "@medusajs/ui"
+import ProductActions from "@modules/products/components/product-actions"
 
 const PRODUCT_LIMIT = 12;
 
@@ -83,7 +84,8 @@ export default async function PaginatedProducts({
                   <Table.Cell>{p.collection?.title ?? "N/A"}</Table.Cell>
                   <Table.Cell></Table.Cell>
                   <Table.Cell className="space-x-2">
-                    <Button>Agregar al carrito</Button>
+                    <ProductActions product={p} disabled={false} region={region}/>
+
                     <Button>Ver</Button>
                   </Table.Cell>
                 </Table.Row>

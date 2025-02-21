@@ -4,6 +4,10 @@ import { getProductsById } from "@lib/data/products"
 import { getProductPrice } from "@lib/util/get-product-price"
 import { LocalizedLink } from "@/components/LocalizedLink"
 import Thumbnail from "../thumbnail"
+import AddToCart from "../add-to-card"
+import ProductActions from "../product-actions"
+
+
 
 export default async function ProductPreview({
   product,
@@ -23,14 +27,6 @@ export default async function ProductPreview({
     return null
   }
 
-  const { cheapestPrice } = getProductPrice({
-    product: pricedProduct,
-  })
-
-  const hasReducedPrice =
-    cheapestPrice &&
-    cheapestPrice.calculated_price_number < cheapestPrice.original_price_number
-
   return (
     <LocalizedLink href={`/products/${product.handle}`}>
       <Thumbnail
@@ -48,24 +44,10 @@ export default async function ProductPreview({
             </p>
           )}
         </div>
-        {cheapestPrice ? (
-          hasReducedPrice ? (
-            <div>
-              <p className="font-semibold max-md:text-xs text-red-primary">
-                {cheapestPrice.calculated_price}
-              </p>
-              <p className="max-md:text-xs text-grayscale-500 line-through">
-                {cheapestPrice.original_price}
-              </p>
-            </div>
-          ) : (
-            <div>
-              <p className="font-semibold max-md:text-xs">
-                {cheapestPrice.calculated_price}
-              </p>
-            </div>
-          )
-        ) : null}
+        <div className="mt-4">
+
+        <ProductActions product={product} region={region} />
+        </div>
       </div>
     </LocalizedLink>
   )
