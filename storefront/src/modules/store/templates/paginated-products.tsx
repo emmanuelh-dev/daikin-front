@@ -86,7 +86,7 @@ export default async function PaginatedProducts({
                   <Table.Cell className="space-x-2">
                     <ProductActions product={p} disabled={false} region={region}/>
 
-                   
+                    <Button>Ver</Button>
                   </Table.Cell>
                 </Table.Row>
               ))}
