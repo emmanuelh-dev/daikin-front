@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   )
 
   const metadata = {
-    title: `${collection.title} | Medusa Store`,
+    title: `${collection.title} | DAIKIN`,
     description:
       collectionDetails.success && collectionDetails.data.description
         ? collectionDetails.data.description

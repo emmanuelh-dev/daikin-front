@@ -107,7 +107,7 @@ export default async function Home({
               Más sobre
             </h3>
             <Image
-              src="/images/content/sofa2.png"
+              src="/images/content/sofa2.webp"
               width={2496}
               height={1400}
               alt="Sofa"

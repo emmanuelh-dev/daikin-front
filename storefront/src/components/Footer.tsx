@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                   &copy; {new Date().getFullYear()}, DAIKIN.
                 </p>
               </div>
-              <div className="flex gap-10 xl:gap-18 max-md:text-xs flex-1 justify-between lg:justify-center">
+              {/* <div className="flex gap-10 xl:gap-18 max-md:text-xs flex-1 justify-between lg:justify-center">
                 <ul className="flex flex-col gap-6 md:gap-3.5">
                   <li>
                     <LocalizedLink href="/">FAQ</LocalizedLink>
@@ -75,10 +75,10 @@ export const Footer: React.FC = () => {
                     </LocalizedLink>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
 
-            <NewsletterForm className="flex-1 max-lg:w-full lg:max-w-90 xl:max-w-96 max-lg:order-1 max-md:mb-16" />
+            {/* <NewsletterForm className="flex-1 max-lg:w-full lg:max-w-90 xl:max-w-96 max-lg:order-1 max-md:mb-16" /> */}
           </div>
         </LayoutColumn>
       </Layout>
