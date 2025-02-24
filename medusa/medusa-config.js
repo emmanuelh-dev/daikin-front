@@ -5,7 +5,7 @@ loadEnv(process.env.NODE_ENV, process.cwd());
 module.exports = defineConfig({
   admin: {
     backendUrl:
-      process.env.BACKEND_URL ?? 'https://sofa-society-starter.medusajs.app',
+      process.env.BACKEND_URL ?? '24.199.116.140:9000',
     storefrontUrl: process.env.STOREFRONT_URL,
   },
   projectConfig: {
@@ -43,21 +43,30 @@ module.exports = defineConfig({
       options: {
         providers: [
           {
-            resolve: '@medusajs/medusa/file-s3',
-            id: 's3',
+            resolve: "@medusajs/medusa/file-local",
+            id: "local",
             options: {
-              file_url: process.env.S3_FILE_URL,
-              access_key_id: process.env.S3_ACCESS_KEY_ID,
-              secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
-              region: process.env.S3_REGION,
-              bucket: process.env.S3_BUCKET,
-              endpoint: process.env.S3_ENDPOINT,
-              additional_client_config: {
-                forcePathStyle:
-                  process.env.S3_FORCE_PATH_STYLE === 'true' ? true : undefined,
-              },
+              backendUrl:
+                    (process.env.BACKEND_URL ?? '24.199.116.140:9000') + "/static",
             },
           },
+
+          // {
+          //   resolve: '@medusajs/medusa/file-s3',
+          //   id: 's3',
+          //   options: {
+          //     file_url: process.env.S3_FILE_URL,
+          //     access_key_id: process.env.S3_ACCESS_KEY_ID,
+          //     secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+          //     region: process.env.S3_REGION,
+          //     bucket: process.env.S3_BUCKET,
+          //     endpoint: process.env.S3_ENDPOINT,
+          //     additional_client_config: {
+          //       forcePathStyle:
+          //         process.env.S3_FORCE_PATH_STYLE === 'true' ? true : undefined,
+          //     },
+          //   },
+          // },
         ],
       },
     },
