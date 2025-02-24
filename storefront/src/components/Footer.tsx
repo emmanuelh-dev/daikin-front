@@ -19,6 +19,7 @@ export const Footer: React.FC = () => {
                 </p>
               </div>
               <div className="flex gap-10 xl:gap-18 max-md:text-xs flex-1 justify-between lg:justify-center">
+                {/*
                 <ul className="flex flex-col gap-6 md:gap-3.5">
                   <li>
                     <LocalizedLink href="/">FAQ</LocalizedLink>
@@ -33,6 +34,7 @@ export const Footer: React.FC = () => {
                     <LocalizedLink href="/">Returns</LocalizedLink>
                   </li>
                 </ul>
+                */}
                 <ul className="flex flex-col gap-6 md:gap-3.5">
                   <li>
                     <a
