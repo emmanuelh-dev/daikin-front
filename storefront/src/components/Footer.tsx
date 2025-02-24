@@ -36,27 +36,30 @@ export const Footer: React.FC = () => {
                 <ul className="flex flex-col gap-6 md:gap-3.5">
                   <li>
                     <a
-                      href="https://www.instagram.com/agiloltd/"
+                      href="https://www.instagram.com/daikin.mexico?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       target="_blank"
                     >
                       Instagram
                     </a>
                   </li>
                   <li>
-                    <a href="https://tiktok.com" target="_blank">
-                      TikTok
+                    <a href="https://x.com/DaikinMexico" target="_blank">
+                      X
                     </a>
                   </li>
+                  {/*
                   <li>
                     <a href="https://pinterest.com" target="_blank">
                       Pinterest
                     </a>
                   </li>
+                  */}
                   <li>
-                    <a href="https://facebook.com" target="_blank">
+                    <a href="https://www.facebook.com/DaikinMexico/?locale=es_LA" target="_blank">
                       Facebook
                     </a>
                   </li>
+                {/*
                 </ul>
                 <ul className="flex flex-col gap-6 md:gap-3.5">
                   <li>
@@ -74,11 +77,12 @@ export const Footer: React.FC = () => {
                       Terms of Use
                     </LocalizedLink>
                   </li>
+                  */}
                 </ul>
               </div>
             </div>
 
-            <NewsletterForm className="flex-1 max-lg:w-full lg:max-w-90 xl:max-w-96 max-lg:order-1 max-md:mb-16" />
+            {/* <NewsletterForm className="flex-1 max-lg:w-full lg:max-w-90 xl:max-w-96 max-lg:order-1 max-md:mb-16" /> */}
           </div>
         </LayoutColumn>
       </Layout>
