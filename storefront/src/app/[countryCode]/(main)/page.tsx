@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
 }
 
+const PLACEHOLDER_IMAGE = "/images/placeholder.jpeg"
+
 const ProductTypesSection: React.FC = async () => {
   const productTypes = await getProductTypesList(0, 20, [
     "id",

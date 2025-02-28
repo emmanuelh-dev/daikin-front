@@ -33,6 +33,8 @@ async function getRegionMap() {
       notFound()
     }
 
+    console.log(regions)
+
     // Create a map of country codes to regions.
     regions.forEach((region: HttpTypes.StoreRegion) => {
       region.countries?.forEach((c) => {

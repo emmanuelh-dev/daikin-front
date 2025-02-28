@@ -28,6 +28,19 @@ type ProductTemplateProps = {
   countryCode: string
 }
 
+const PLACEHOLDER_IMAGE = "/images/placeholder.jpeg"
+
+const ProductDescription = ({ description } : { description: string }) => {
+  const formattedDescription = description.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      <br />
+    </React.Fragment>
+  ));
+
+  return <div>{formattedDescription}</div>;
+};
+
 const ProductTemplate: React.FC<ProductTemplateProps> = ({
   product,
   materials,
@@ -57,11 +70,18 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
       <Layout>
         <LayoutColumn className="mb-26 md:mb-36">
           <div className="flex max-lg:flex-col gap-8 xl:gap-27">
-            {hasImages && (
+            {hasImages ? (
               <div className="lg:w-1/2 flex flex-1 flex-col gap-8">
                 <ImageGallery className="max-md:hidden" images={images} />
               </div>
-            )}
+            ): (
+            <Image src={PLACEHOLDER_IMAGE}
+             alt="Daikin"
+             width={500}
+             height={500} 
+             className="mb-8 md:mb-16 max-md:aspect-[3/2] max-md:object-cover"
+              />
+              )}
             <div className="sticky flex-1 top-0">
               <ProductInfo product={product} />
               <Suspense
@@ -81,10 +101,18 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
                 />
               </Suspense>
             </div>
+
+
             {!hasImages && <div className="flex-1" />}
+            
           </div>
         </LayoutColumn>
+        <div className="col-span-full">
+        {product.description && <ProductDescription description={product.description} />}
+        </div>
       </Layout>
+      
+
       {collectionDetails.success &&
         ((typeof collectionDetails.data.product_page_heading === "string" &&
           collectionDetails.data.product_page_heading.length > 0) ||

@@ -3,7 +3,7 @@ import Image from "next/image"
 import { clx } from "@medusajs/ui"
 import { HttpTypes } from "@medusajs/types"
 
-import PlaceholderImage from "@modules/common/icons/placeholder-image"
+const PLACEHOLDER_IMAGE = "/images/placeholder.jpeg"
 
 type ThumbnailProps = {
   thumbnail?: HttpTypes.StoreProduct["thumbnail"]
@@ -59,8 +59,12 @@ const ImageOrPlaceholder = ({
     />
   ) : (
     <div className="w-full h-full absolute inset-0 flex items-center justify-center">
-      <PlaceholderImage size={size === "small" ? 16 : 24} />
-    </div>
+      <Image src={PLACEHOLDER_IMAGE}
+        alt="Daikin"
+        width={500}
+        height={500}
+        className="mb-8 md:mb-16 max-md:aspect-[3/2] max-md:object-cover"
+      />    </div>
   )
 }
 
